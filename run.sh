@@ -20,3 +20,18 @@ sudo docker build -t python-hw .
 
 # Run Docker image
 sudo docker run -p 5000:5000 python-hw
+
+
+# Push and Pull images to GCR
+# Authenticate
+gcloud auth login
+
+gcloud auth configure-docker
+
+gcloud auth activate-service-account demosvc@demoproject-323305.iam.gserviceaccount.com --key-file=demoproject-323305-5b62c68ebf1f.json
+
+# Push
+docker push gcr.io/demoproject-323305/python-hw
+
+# Pull
+docker pull gcr.io/demoproject-323305/python-hw
