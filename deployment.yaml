@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: python-hw
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: python-hw-app
+  template:
+    metadata:
+      labels:
+        app: python-hw-app
+    spec:
+      containers:
+        - name: python-appnexus
+          image: gcr.io/demoproject-323305/python-hw
+          resources:
+            limits:
+              memory: "6Gi"
+              cpu: "1000m"
+            requests:
+              memory: "2Gi"
+              cpu: "500m"
+          ports:
+            - containerPort: 5000
