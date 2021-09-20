@@ -35,3 +35,7 @@ docker push gcr.io/demoproject-323305/python-hw
 
 # Pull
 docker pull gcr.io/demoproject-323305/python-hw
+
+# App deployment and service creation
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
