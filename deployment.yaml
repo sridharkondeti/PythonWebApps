@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: python-appnexus
-          image: gcr.io/demoproject-323305/python-hw
+          image: gcr.io/demoproject-323305/python-hw:latest
           resources:
             limits:
               memory: "6Gi"
