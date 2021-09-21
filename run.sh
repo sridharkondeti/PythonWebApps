@@ -30,6 +30,9 @@ gcloud auth configure-docker
 
 gcloud auth activate-service-account demosvc@demoproject-323305.iam.gserviceaccount.com --key-file=demoproject-323305-5b62c68ebf1f.json
 
+# Tag the image
+sudo docker tag python-wa gcr.io/demoproject-323305/python-hw
+
 # Push
 docker push gcr.io/demoproject-323305/python-hw
 
