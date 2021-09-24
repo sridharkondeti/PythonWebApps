@@ -23,7 +23,7 @@ pipeline {
         }
         stage ('Deployment Stage') {
             steps {
-                    sh 'docker run -d -p 5000:5000 python-hw'
+                    sh 'docker run -d -p 80:5000 python-hw'
             }
         }
     }
