@@ -15,6 +15,10 @@ sudo apt-get update
 sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 
+# Fix permission issue to run Docker from Jenkins.
+sudo usermod -aG docker jenkins
+sudo chmod 777 /var/run/docker.sock
+
 # Build Docker image
 sudo docker build -t python-hw .
 
