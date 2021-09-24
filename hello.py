@@ -4,4 +4,4 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return 'Hello World from GitHub!'
+    return 'Hello World app is running in Docker container!'
